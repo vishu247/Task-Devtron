@@ -1,0 +1,9 @@
+#! /bin/bash
+
+echo "please give the name of the directory"
+
+read dir
+
+ls -l -p $dir | grep -v /
+
+exit 0
