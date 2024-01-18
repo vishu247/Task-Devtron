@@ -1,0 +1,17 @@
+FROM aju121/node:v1
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+ENV URL=
+
+EXPOSE 3000
+
+WORKDIR /app/public
+
+CMD ["npm", "start"]
